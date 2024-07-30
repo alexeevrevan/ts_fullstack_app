@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "server": "nodemon ./bin/www"
+    "server": "nodemon ./bin/www",
+    "client": "yarn run dev --prefix client",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\" "
   },
   "dependencies": {
     "@prisma/client": "^5.17.0",
