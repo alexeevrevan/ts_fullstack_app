@@ -17,10 +17,10 @@ export const CustomButton = ({
   type,
   danger,
   loading,
-  htmlType = 'button',
+  htmlType = "button",
   onClick,
   shape,
-  icon
+  icon,
 }: Props) => {
   return (
     <Form.Item>
@@ -30,9 +30,9 @@ export const CustomButton = ({
         danger={danger}
         loading={loading}
         size="large"
-        shape={ shape }
-        onClick={ onClick }
-        icon={ icon }
+        shape={shape}
+        onClick={onClick}
+        icon={icon}
       >
         {children}
       </Button>

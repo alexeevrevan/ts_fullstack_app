@@ -2,7 +2,6 @@ import { Employee } from "@prisma/client";
 import { api } from "./api";
 
 export const employeesApi = api.injectEndpoints({
-
   endpoints: (builder) => ({
     getAllEmployees: builder.query<Employee[], void>({
       query: () => ({
@@ -40,7 +39,6 @@ export const employeesApi = api.injectEndpoints({
         method: "POST",
         body: employee,
       }),
-      
     }),
   }),
 });

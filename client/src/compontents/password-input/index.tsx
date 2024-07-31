@@ -7,11 +7,7 @@ type Props = {
   dependencies?: NamePath[];
 };
 
-export const PasswordInput = ({
-  name,
-  placeholder,
-  dependencies,
-}: Props) => {
+export const PasswordInput = ({ name, placeholder, dependencies }: Props) => {
   return (
     <Form.Item
       name={name}
@@ -24,17 +20,15 @@ export const PasswordInput = ({
         },
         ({ getFieldValue }) => ({
           validator(_, value) {
-            if (!value ) {
+            if (!value) {
               return Promise.resolve();
             }
 
-            if (name === 'confirmPassword') {
+            if (name === "confirmPassword") {
               if (!value || getFieldValue("password") === value) {
                 return Promise.resolve();
               }
-              return Promise.reject(
-                new Error("Пароли должны совпадать")
-              );
+              return Promise.reject(new Error("Пароли должны совпадать"));
             } else {
               if (value.length < 6) {
                 return Promise.reject(
